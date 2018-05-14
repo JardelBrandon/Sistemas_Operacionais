@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0078)https://suap.ifpb.edu.br/media/edu/material_aula/Exercicio_Multithreading.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Exercício - Multithreading</title>
+  <style type="text/css">
+<!--
+ .style1 {font-family: Arial, Helvetica, sans-serif}
+ .style3 {color: #0000FF}
+ .fonte_arial {
+font-family: Arial, Helvetica, sans-serif;
+}
+ .centralizado {
+text-align: center;
+}
+ .centralizado {
+text-align: center;
+}
+-->
+  </style>
+</head>
+
+<body>
+
+<blockquote>
+  <p class="style1">Instituto Federal da Paraíba - IFPB<br>
+  Curso: Engenharia da Computação<br>
+  Disciplina: Sistemas Operacionais<br>
+  Prof: Bruno de Brito<br>
+  Exercício - Multithreading<br>
+<br>
+Para resolução destas questões, utilize as classes contidas neste <a href="https://suap.ifpb.edu.br/media/edu/material_aula/Exercicio%20Multithreading.zip">arquivo</a>
+</p>
+
+</blockquote>
+<ol class="style1">
+  <li>Modifique a classe Pessoa para o que o código contido no método informarDesejo seja executado em uma thread separada do método main e de forma a permitir o paralelismo na "discussão" entre homem e mulher.</li>
+  <li>Altere a classe Alarme para que fique constantemente verificando a hora e o minuto do sistema. A classe deve avisar as interfaces gráficas em formato de relógio digital e analógico quando a verificação for feita pela primeira vez ou quando houver alteração no valor da hora ou do minuto. A cada iteração, a thread deve esperar um tempo definido pela constante INTERVALO.</li>
+  <li>Mude o comportamento da classe PortaRetrato para que repita o seguinte procedimento indefinidamente: obter a lista de arquivos de imagens contidas no diretório fornecido no construtor, para cada arquivo alterar a imagem do frame de imagem (método setImagem) e aguardar durante o intervalo de tempo passado como argumento no construtor.</li>
+  <li>Uma thread deve salvar automaticamente, a cada minuto, o texto que estiver digitado. Este salvamento só pode ocorrer após a definição do arquivo que deve receber o texto através do atributo arquivo da classe Notepad (seja via opção salvar arquivo ou abrir arquivo). Dica: use o método salvarArquivo.</li>
+  <li>Modifique o servidor HTTP (que pode ser acessado através de http://localhost:8080) para que, enquanto estiver executando, o tratamento de cada nova conexão estabelecida seja feita em um novo thread. O tratamento consiste em executar o método escreverSaida da classe TratadorDeRequisicoes.</li>
+</ol>
+
+
+</body></html>
