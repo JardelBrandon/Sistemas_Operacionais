@@ -14,10 +14,11 @@ public class ServidorHTTP
 		try 
 		{	soqueteServidor = new ServerSocket(PORTA_PADRAO);
 			System.out.println("Servidor aguardando conexao...");
-			Socket soquete = soqueteServidor.accept();
-			System.out.println("Nova conexao estabelecida em " + new Date());
-			TratadorDeRequisicoes tratador = new TratadorDeRequisicoes(soquete);
-			tratador.escreverSaida();
+                        while (true) {
+                                Socket soquete = soqueteServidor.accept();
+                                System.out.println("Nova conexao estabelecida em " + new Date());
+                                new Thread(new TratadorDeRequisicoes(soquete)).start();
+                        }
 		} catch (Exception e) 
 		{	System.out.println(e.getMessage());
 		} finally 

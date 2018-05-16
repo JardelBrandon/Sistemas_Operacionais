@@ -7,8 +7,10 @@ import java.net.Socket;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-public class TratadorDeRequisicoes 
+public class TratadorDeRequisicoes implements Runnable
 {
 	private static final DateFormat FORMATADOR_DATA = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss z");
 	private Socket soquete;
@@ -35,4 +37,13 @@ public class TratadorDeRequisicoes
 		saida.write("</ul></body></html>".getBytes());
 		soquete.close();
 	}
+
+    @Override
+    public void run() {
+            try {
+                escreverSaida();
+            } catch (IOException ex) {
+                Logger.getLogger(TratadorDeRequisicoes.class.getName()).log(Level.SEVERE, null, ex);
+            }
+    }
 }

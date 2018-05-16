@@ -106,7 +106,7 @@ public class Notepad extends JFrame implements ActionListener, Runnable {
                 salvarArquivo();
                 System.out.println("Arquivo salvo!");
             }
-            //esperarTempo(0);
+            esperarTempo(0);
         }
     }
     
